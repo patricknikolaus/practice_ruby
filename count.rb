@@ -10,5 +10,5 @@ end
 if sally.include?("French")
   p "They should get married."
 else
-  p "They should not get married."
+  p "They shouldn't get married."
 end
