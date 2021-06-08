@@ -5,4 +5,6 @@ p "Please enter your 5 favorite foods!"
   fav << food
 end
 
-p fav
+fav.each do |food|
+  p "I love #{food}!"
+end
