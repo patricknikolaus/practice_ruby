@@ -162,3 +162,73 @@ city2 = "Chicago"
 city3 = "L.A."
 
 p "I was born in " + city1 + " and I lived in " + city2 + " for a bit. But I would never want to live in " + city3
+
+# # 1. Write a program that asks the user to enter a word, then prints that word with all capital letters.
+print "Please enter a word: "
+word = gets.chomp.upcase
+p word
+
+# 2. Write a program that asks the user to enter a number, then prints "That's a big number" if the number is greater than 100.
+print "Please enter a number: "
+number = gets.chomp.to_i
+if number > 100
+  p "That's a big number!"
+end
+
+# 3. Write a program that asks the user to enter two numbers, then prints the numbers added together.
+p "Please enter two numbers: "
+num = []
+2.times do
+  number = gets.chomp.to_i
+  num << number
+end
+p num[0] + num[1]
+
+# 4. Write a program that asks the user to enter a word, then prints that word in reverse order.
+print "Please enter a word: "
+word = gets.chomp.reverse
+p word
+
+# 5. Write a program that asks the user to enter a number, then prints the number times 10.
+print "Please enter a number: "
+number = gets.chomp
+10.times do
+  p number
+end
+
+# 6. Write a program that asks the user to enter two words, then prints both words on the same line in all capital letters.
+p "Please enter two words: "
+cap = []
+2.times do
+  word = gets.chomp.upcase
+  cap << word
+end
+p "#{cap[0]} #{cap[1]}" 
+
+# 7. Write a program that asks the user to enter a word, then prints the number of letters in the word.
+p "Please enter a word:"
+word = gets.chomp
+p word.length
+
+# 8. Write a program that asks the user to enter a number, then prints "That's a negative number" if the number is less than 0.
+print "Please enter a number: "
+number = gets.chomp.to_i
+if number < 0 
+  p "That's a negative number."
+end
+
+# 9. Write a program that asks the user to enter two numbers, then prints the two numbers multiplied together.
+p "Please enter two numbers:"
+nums = []
+2.times do
+  number = gets.chomp.to_i
+  nums << number
+end
+p nums[0] * nums[1]
+
+# 10. Write a program that asks the user to enter a word, then prints "That's a long word" if the word has more than 5 letters.
+print "Please enter a word: "
+word = gets.chomp
+if word.length > 5
+  p "That's a long word."
+end
