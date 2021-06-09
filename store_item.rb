@@ -49,58 +49,61 @@
 # p "The #{cars[2][:name]} comes in #{cars[2][:color]}. It cost #{cars[2][:price]} and we have #{cars[2][:stock]} in stock."
 
 class Car
+  attr_reader :make, :model, :color, :price, :stock
+  attr_writer :price, :stock
+
   def initialize(input_options)
-    @make = input_options[:Make]
-    @model = input_options[:Model]
-    @color = input_options[:Color]
-    @price = input_options[:Price]
-    @stock = input_options[:Stock]
+    @make = input_options[:make]
+    @model = input_options[:model]
+    @color = input_options[:color]
+    @price = input_options[:price]
+    @stock = input_options[:stock]
   end
 
   def print_info
     if @stock < 2
-      p "We have #{stock} #{make} #{model} in stock."
+      p "We have #{@stock} #{@make} #{@model} in stock."
     else
-      p "We have #{stock} #{make} #{model}'s in stock."
+      p "We have #{@stock} #{@make} #{@model}'s in stock."
     end
   end
 
-  def make
-    @make
-  end
+  # def make
+  #   @make
+  # end
 
-  def model
-    @model
-  end
+  # def model
+  #   @model
+  # end
 
-  def color
-    @color
-  end
+  # def color
+  #   @color
+  # end
 
-  def price
-    @price
-  end
+  # def price
+  #   @price
+  # end
 
-  def stock
-    @stock
-  end
+  # def stock
+  #   @stock
+  # end
 
-  def price=(input_price)
-    @price = input_price
-  end
+  # def price=(input_price)
+  #   @price = input_price
+  # end
 
-  def stock=(input_stock)
-    @stock = input_stock
-  end
+  # def stock=(input_stock)
+  #   @stock = input_stock
+  # end
 
 end
 
 car1 = Car.new( 
-  Make: "Hyundai", 
-  Model: "Kona", 
-  Color: "Black", 
-  Price: 23000, 
-  Stock: 1
+  make: "Hyundai", 
+  model: "Kona", 
+  color: "Black", 
+  price: 23000, 
+  stock: 1
 )
 p car1
 p car1.make
@@ -111,11 +114,11 @@ p car1.stock
 car1.print_info
 
 car2 = Car.new(
-  Make: "Honda",
-  Model: "Civic",
-  Color: "Red",
-  Price: 12000,
-  Stock: 0
+  make: "Honda",
+  model: "Civic",
+  color: "Red",
+  price: 12000,
+  stock: 0
 )
 p car2
 p car2.make
