@@ -49,12 +49,12 @@
 # p "The #{cars[2][:name]} comes in #{cars[2][:color]}. It cost #{cars[2][:price]} and we have #{cars[2][:stock]} in stock."
 
 class Car
-  def initialize(input_make, input_model, input_color, input_price, input_stock)
-    @make = input_make
-    @model = input_model
-    @color = input_color
-    @price = input_price
-    @stock = input_stock
+  def initialize(input_options)
+    @make = input_options[:Make]
+    @model = input_options[:Model]
+    @color = input_options[:Color]
+    @price = input_options[:Price]
+    @stock = input_options[:Stock]
   end
 
   def print_info
@@ -95,7 +95,13 @@ class Car
 
 end
 
-car1 = Car.new("Hyundai", "Kona", "Black", 23000, 1)
+car1 = Car.new( 
+  Make: "Hyundai", 
+  Model: "Kona", 
+  Color: "Black", 
+  Price: 23000, 
+  Stock: 1
+)
 p car1
 p car1.make
 car1.print_info
@@ -103,3 +109,18 @@ p car1.stock
 car1.stock = 4
 p car1.stock
 car1.print_info
+
+car2 = Car.new(
+  Make: "Honda",
+  Model: "Civic",
+  Color: "Red",
+  Price: 12000,
+  Stock: 0
+)
+p car2
+p car2.make
+car2.print_info
+p car2.stock
+car2.stock = 4
+p car2.stock
+car2.print_info
