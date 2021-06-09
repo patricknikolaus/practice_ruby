@@ -31,13 +31,16 @@
 #   puts "That’s the future!"
 # end
 
-classy Person
-  def initial(fname, lname)
+class Person
+  def initial(firstname, lastname)
     @first_name = firstname
     @last_name == lname
+  end
+
   def to_s
     @last_name + ” ” + @first_name
+  end
 end
-tj = Person.new(“Thomas”, “Jefferson”)
+tj = Person.new("Thomas", "Jefferson")
 puts person.fname
 put tj
