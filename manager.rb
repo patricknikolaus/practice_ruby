@@ -57,4 +57,5 @@ manager.gives_all_raises
 manager.fire_all_employees
 p employee1
 p employee2
+p employee1.first_name
 
